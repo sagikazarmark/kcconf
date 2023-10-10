@@ -1,0 +1,10 @@
+- name: mock
+  config:
+    connector.class: org.apache.kafka.connect.tools.MockSinkConnector
+    key.converter: "org.apache.kafka.connect.storage.StringConverter"
+    value.converter: "org.apache.kafka.connect.json.JsonConverter"
+    value.converter.schemas.enable: "false"
+    schemas.enable: "false"
+    topics.regex: "^om_[A-Za-z0-9]+(?:_[A-Za-z0-9]+)*_events$"
+    errors.tolerance: "all"
+    errors.retry.timeout: "30"

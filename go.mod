@@ -3,9 +3,12 @@ module github.com/sagikazarmark/kcconf
 go 1.21.1
 
 require (
+	github.com/cenkalti/backoff/v4 v4.2.1
 	github.com/deepmap/oapi-codegen v1.15.0
 	github.com/getkin/kin-openapi v0.118.0
 	github.com/oapi-codegen/runtime v1.0.0
+	github.com/spf13/pflag v1.0.5
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -23,5 +26,4 @@ require (
 	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/tools v0.12.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
