@@ -1,0 +1,5 @@
+default:
+    just --list
+
+download-openapi:
+	curl https://kafka.apache.org/35/generated/connect_rest.yaml > openapi.yaml
