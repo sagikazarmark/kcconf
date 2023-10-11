@@ -64,7 +64,7 @@ func main() {
 
 	logger.Info("loading connector configuration")
 
-	file, err := os.Open("connectors.yaml")
+	file, err := os.Open(*connectorsFile)
 	if err != nil {
 		panic(err)
 	}
