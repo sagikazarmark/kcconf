@@ -110,11 +110,7 @@ func main() {
 
 			err := decoder.Decode(&apiResp)
 			if err != nil {
-				// TODO: handle decoding error
-			}
-
-			if apiResp.Message == "" {
-				// TODO: handle empty api response message
+				logger.Error("connector create/update failed, but the error response is gibberish", slog.Int("status-code", resp.StatusCode))
 			}
 
 			logger.Error(fmt.Sprintf("connector create/update failed: %s", apiResp.Message), slog.Int("error-code", apiResp.ErrorCode))
